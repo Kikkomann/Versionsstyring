@@ -11,7 +11,7 @@ public class TestBilletautomat {
 	@Test
 	public void testIndsætNegativeBeloeb() {
 		Billetautomat automat = new Billetautomat();
-		automat.setBilletpris(-10);
+		automat.indsætPenge(-10);
 		assertEquals(0, automat.getBalance());
 	}
 
@@ -24,16 +24,19 @@ public class TestBilletautomat {
 	}
 	
 	@Test
-	public void testNegativeBeloeb() {
+	public void testSaetNegativPris() {
 		Billetautomat automat = new Billetautomat();
-		
-		assertEquals(expected, actual);
+		automat.erMontør();
+		automat.setBilletpris(-10);
+		assertEquals(0, automat.getBalance());
 	}
 	
-	@Test
-	public void testNegativeBeloeb() {
-		Billetautomat automat = new Billetautomat();
-		
-		assertEquals(expected, actual);
-	}
+//	@Test
+//	public void testSaetPrisUdenMontoer() {
+//		Billetautomat automat = new Billetautomat();
+//		
+//		assertEquals(expected, actual);
+//	}
+	
+
 }
