@@ -29,14 +29,8 @@ public class TestBilletautomat {
 		automat.erMontør();
 		automat.setBilletpris(-10);
 		assertEquals(0, automat.getBalance());
+		//Kan ikke logge ind som montør uden at ændre Billetautomat-koden.
 	}
-	
-//	@Test
-//	public void testSaetPrisUdenMontoer() {
-//		Billetautomat automat = new Billetautomat();
-//		
-//		assertEquals(expected, actual);
-//	}
 	
 
 }
